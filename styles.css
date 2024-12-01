@@ -61,7 +61,7 @@ button:active {
 }
 
 #timer-display {
-  font-size: 500px; /* 倒數計時字體大小 */
+  font-size: 300px; /* 倒數計時字體大小 */
   font-weight: bold;
   margin: 20px 0;
 }
