@@ -7,9 +7,9 @@ const timerDisplay = document.getElementById("timer-display");
 const startPauseButton = document.getElementById("start-pause-button");
 const backButton = document.getElementById("back-button");
 
-let initialTime = 0;
-let currentTime = 0;
-let isRunning = false;
+let initialTime = 0; // 初始倒數時間
+let currentTime = 0; // 當前倒數時間
+let isRunning = false; // 計時器是否正在運行
 let timerStage = 1; // 1: 第一階段倒數, 2: 第二階段倒數
 let intervalId;
 
@@ -25,10 +25,11 @@ function startTimer() {
       currentTime--;
       timerDisplay.textContent = formatTime(currentTime);
     } else {
+      // 切換倒數階段
       if (timerStage === 1) {
         timerStage = 2;
-        currentTime = initialTime - 1; // 第二次倒數從初始時間減 1
-        if (currentTime <= 0) currentTime = 1; // 確保不會小於 1
+        currentTime = initialTime - 1; // 第二次倒數從初始時間 - 1 開始
+        if (currentTime <= 0) currentTime = 1; // 確保不小於 1
       } else {
         timerStage = 1;
         currentTime = initialTime; // 重置到初始時間
@@ -46,7 +47,7 @@ confirmButton.addEventListener("click", () => {
   const seconds = parseInt(secondsInput.value) || 0;
 
   const totalSeconds = minutes * 60 + seconds;
-  initialTime = Math.ceil(totalSeconds / 16); // 除以 16，無條件進位
+  initialTime = Math.ceil(totalSeconds / 16); // 除以 16 無條件進位
   currentTime = initialTime;
 
   timerDisplay.textContent = formatTime(currentTime);
