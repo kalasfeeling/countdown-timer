@@ -72,7 +72,10 @@ button:active {
 }
 
 #instructions-image {
-  max-width: 100%;
+  max-width: 100%; /* 最大寬度為螢幕寬度的 70% */
+  max-height: 200vh; /* 最大高度為螢幕高度的 70% */
+  width: auto; /* 優先按照圖片本身比例自適應 */
   height: auto;
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px;
 }
