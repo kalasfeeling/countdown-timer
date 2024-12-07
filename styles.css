@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 18px;
+  font-size: 18px; /* 全站基礎字體大小 */
 }
 
 .screen {
@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 36px; /* 標題字體大小 */
   margin-bottom: 20px;
 }
 
@@ -42,7 +42,7 @@ input {
 }
 
 button {
-  font-size: 20px;
+  font-size: 20px; /* 按鈕字體大小 */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -65,18 +65,14 @@ button:active {
   color: #333;
 }
 
-.yellow-button:hover {
-  background: #e6b800;
-}
-
 #timer-display {
-  font-size: 70vmin;
+  font-size: 70vmin; /* 倒數計時字體大小占螢幕 70% */
   font-weight: bold;
   margin: 20px 0;
 }
 
-#instruction-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 圖片裁切適應容器 */
+#instructions-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
