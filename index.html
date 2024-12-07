@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>體適能-心肺適能800公尺配速表</title>
+  <title>體適能-心肺適能800公尺配速計算器</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- 首頁 -->
   <div id="home-screen" class="screen">
-    <h1>體適能-心肺適能800公尺配速表</h1>
+    <h1>體適能-心肺適能800公尺配速計算器</h1>
     <div class="input-container">
       <label for="minutes">分鐘:</label>
       <input type="number" id="minutes" placeholder="0" min="0">
@@ -19,9 +19,10 @@
       <input type="number" id="seconds" placeholder="0" min="0" max="59">
     </div>
     <button id="confirm-button">確定</button>
+    <button id="instructions-button" class="yellow-button">使用說明</button>
   </div>
 
-  <!-- 倒數計時器畫面 -->
+  <!-- 倒數計時器頁面 -->
   <div id="timer-screen" class="screen hidden">
     <h1>倒數計時</h1>
     <div id="timer-display">00:00</div>
@@ -29,6 +30,13 @@
       <button id="start-pause-button">開始</button>
       <button id="back-button">回首頁</button>
     </div>
+  </div>
+
+  <!-- 使用說明頁面 -->
+  <div id="instructions-screen" class="screen hidden">
+    <h1>使用說明</h1>
+    <img id="instruction-image" src="" alt="規則說明">
+    <button id="back-to-home-button">回到首頁</button>
   </div>
 
   <script src="script.js"></script>
